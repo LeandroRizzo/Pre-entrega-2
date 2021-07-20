@@ -42,7 +42,7 @@ function guardarProducto(){
         arrayProductos.push(nuevoObjeto)
         localStorage.setItem("arrayProductos", JSON.stringify(arrayProductos))
     }
-    
+    imprimirProductos()
 }
 
 //Variables------------------------------------------------------------
@@ -88,6 +88,3 @@ function imprimirProductos(){
 }
 //Eventos--------------------------------------------------------------
 botonGuardar.addEventListener("click", guardarProducto)
-
-
-imprimirProductos()
