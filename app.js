@@ -1,5 +1,14 @@
 // Variables
-let products = [];
+let products = [
+    { 
+        categoria: 'Yerba', marca: 'Taragui', tamaño: '500 grs', precio: '250',},
+    { 
+        categoria: 'Azucar', marca: 'Ledezma', tamaño: '1 kgs', precio: '200',},
+    { 
+        categoria: 'Té', marca: 'Green Hills', tamaño: '50 grs', precio: '190',},
+    { 
+        categoria: 'Gaseosa', marca: 'Coca Cola', tamaño: '2,25 lts', precio: '300',}
+];
 
 // Selectores
 let saveButton = $('#guardar');
@@ -41,13 +50,13 @@ const saveEntity = (product) => {
 const saveProduct = () => {
     const categoria = $('#categoria').val();
     const marca = $('#marca').val();
-    const cantidad = $('#cantidad').val();
+    const tamaño = $('#tamaño').val();
     const precio = $('#precio').val();
 
     const product = {
         categoria,
         marca,
-        cantidad,
+        tamaño,
         precio
     };
     
@@ -73,7 +82,7 @@ const printProduct = (product) => {
     row.append(marcaCollumn);
 
     let cantidadCollumn = $('<th>');
-    cantidadCollumn.text(product.cantidad);
+    cantidadCollumn.text(product.tamaño);
     row.append(cantidadCollumn);
 
     let precioCollumn = $('<th>');
